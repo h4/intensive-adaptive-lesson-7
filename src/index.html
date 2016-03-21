@@ -9,9 +9,252 @@
     <h1>Производительность вёрстки</h1>
 </header>
 
-<section class="slide cover" id="cover">
-    <h2>Производительность вёрстки</h2>
+<section class="slide white" id="cover">
+    <h2 class="shout" style="font-size: 120px;">Производительность вёрстки</h2>
 </section>
+
+<section class="slide">
+    <h2>Критерии производительности</h2>
+
+    <ul>
+        <li class="next">Скорость загрузки</li>
+        <li class="next">Отзывчивость интерфейса</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Критерии производительности</h2>
+
+    <ul>
+        <li class="next">Измеримая скорость</li>
+        <li class="next">«Ощущение» скорости</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Скорость загрузки</h2>
+
+    <ul>
+        <li class="next">Размер файлов
+            <ul class="next">
+                <li class="next">HTML</li>
+                <li class="next">CSS</li>
+                <li class="next">JavaScript</li>
+                <li class="next">JPEG, PNG, SVG</li>
+                <li class="next">Шрифты</li>
+            </ul>
+        </li>
+        <li class="next">Скорость соединения</li>
+        <li class="next">Скорость отдачи сервером</li>
+        <li class="next">Расстояние до сервера</li>
+        <li class="next">Количество запросов</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <p>график роста размера файлов</p>
+</section>
+
+<section class="slide">
+    <p>Скорости подключения - время загрузки среднего сайта</p>
+</section>
+
+<section class="slide">
+    <h2>Demo</h2>
+
+    <ul>
+        <li class="next">Несколько ресурсов / объединение</li>
+        <li class="next">Минификация</li>
+        <li class="next">Гзип</li>
+        <li class="next">Кеширование</li>
+        <li class="next">Географическое распределение</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ускорение загрузки</h2>
+
+    <ul>
+        <li class="next">Текстовые файлы (HTML, CSS, JS, SVG)
+            <ul class="next">
+                <li class="next">Минификация и объединение</li>
+                <li class="next">Сжатие</li>
+                <li class="next">Кеширование</li>
+            </ul>
+        </li>
+        <li class="next">Растровые файлы
+            <ul class="next">
+                <li class="next">Правильные алгоритмы сжатия</li>
+                <li class="next">Объединение в спрайты</li>
+                <li class="next">Кеширование</li>
+            </ul>
+        </li>
+        <li class="next">Шрифт
+            <ul class="next">
+                <li class="next">Выбор правильного формата</li>
+                <li class="next">Оставляем только нужное</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Картинки и шрифты - самые тяжёлые ресурсы</h2>
+
+    <ul>
+        <li class="next">FOUT / FOIT</li>
+        <li class="next">font-display: fallback</li>
+        <li class="next">font loading api</li>
+        <li class="next">preload / prefetch</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Инструменты контроля скорости загрузки</h2>
+
+    <ul>
+        <li class="next">DevTools</li>
+        <li class="next"><a href="http://www.webpagetest.org/">webpagetest.org</a></li>
+        <li class="next"><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>DevTools</h2>
+
+    <ul>
+        <li class="next">Network tab</li>
+        <li class="next">Timeline tab</li>
+        <li class="next">Audits</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>PageSpeed Insights</h2>
+
+    <ul>
+        <li class="next">Desktop</li>
+        <li class="next">Mobile</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Отзывчивость интерфейса</h2>
+
+    <p>Картинка про 60 fps</p>
+</section>
+
+<section class="slide">
+    <h2>Что происходит после загрузки?</h2>
+
+    <ul>
+        <li class="next">Парсинг HTML</li>
+        <li class="next">Построение DOM</li>
+        <li class="next">Построение SCCOM</li>
+        <li class="next">Построение результирующего дерева</li>
+        <li class="next">Вычисление геометрии блоков</li>
+        <li class="next">Отрисовка пикселей на экране</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Построение DOM. Блокирующие и неблокирующие ресурсы</h2>
+
+    <ul>
+        <li class="next">События загрузки страницы DOMContentLoaded и loaded</li>
+        <li class="next">Блокирующий и неблокирующий CSS</li>
+        <li class="next">Блокирующий и неблокирующий JavaScript</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Оптимизация Critical Path</h2>
+
+    <ul>
+        <li class="next">Минимизация количества критических ресурсов</li>
+        <li class="next">Минимизация объема критических ресурсов</li>
+        <li class="next">Как можно скорее загружаем критические ресурсы</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Построение CSSOM и результирующего дерева</h2>
+
+    <ul>
+        <li class="next">Уменьшение вложенности селекторов</li>
+        <li class="next">Использование простых селекторов</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Отрисовка пикселей</h2>
+
+    <p>Картинка pixel pipeline</p>
+</section>
+
+<section class="slide">
+    <h2>Repaint, Reflow, Compositing</h2>
+
+    <p>Пользователь взаимодействует со страницей, страница реагирует - меняет DOM-дерево или применяемы стили</p>
+
+    <ul>
+        <li class="next">Reflow (Layout) - изменяется геометрия элмента</li>
+        <li class="next">Repaint - изменяется только цвет пикселей</li>
+        <li class="next">Compositing - изменение порядка смешивания цветов пиксла</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Что вызывает Reflow?</h2>
+
+    <ul>
+        <li class="next">Изменение геометрии блока</li>
+        <li class="next">Изменение свойств шрифта</li>
+        <li class="next">Больше на <a href="https://csstriggers.com/">csstriggers.com</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Оптимизация Reflow</h2>
+
+    <ul>
+        <li class="next">Подбор свойств, которые не вызывают Reflow</li>
+        <li class="next">Вынесение блока из потока</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>CSS-Анимации</h2>
+
+    <ul>
+        <li class="next">Избегайте триггеров Reflow</li>
+        <li class="next">translate()</li>
+        <li class="next">scale()</li>
+        <li class="next">opacity</li>
+        <li class="next">will-change: transform</li>
+        <li class="next">translateZ() / translate3D()</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Измерение Repaint/Reflow</h2>
+
+    <ul>
+        <li class="next">Вкладка Timeline</li>
+        <li class="next">Settings > Show FPS Meter</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Особенности мобильных</h2>
+
+    <ul>
+        <li class="next">Более нестабильное соединение</li>
+        <li class="next">Более слабое железо</li>
+        <li class="next">Аппаратное ускорение - палка о двух концах</li>
+    </ul>
+</section>
+
 <script src="build/main.js"></script>
 </body>
 </html>
