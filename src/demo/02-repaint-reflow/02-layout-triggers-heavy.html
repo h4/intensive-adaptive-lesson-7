@@ -5,19 +5,37 @@
     <title>Триггеры Reflow</title>
 
     <style>
+        @keyframes slide {
+            0% {top: 0}
+            100% {top: -3px}
+        }
+
         div {
+            position: relative;
+            top: 0;
             cursor: pointer;
             width: 100px;
             height: 100px;
             padding: 5px;
             margin: 10px;
             background: #00AA00;
+            border-radius: 10px;
             box-shadow: 0 1px 10px #999,
-                        inset 0 0 20px #FFF;
+                        inset 0 0 10px #FFF;
+            transition: 1s;
         }
 
-        .margin:hover {
-            margin: 7px 10px 12px;
+        div:hover {
+            box-shadow: 0 1px 30px #999,
+                        inset 0 0 50px #FFF;
+        }
+
+        .animation {
+            transition: box-shadow 1s;
+        }
+
+        .animation:hover {
+            animation: slide 1s;
         }
 
         .position:hover {
@@ -31,7 +49,7 @@
     </style>
 </head>
 <body>
-    <div class="margin">Hover me</div>
+    <div class="animation">Hover me</div>
     <div class="position">Hover me</div>
     <div class="transform">Hover me too</div>
 </body>
