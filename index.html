@@ -10,7 +10,9 @@
 </header>
 
 <section class="slide white" id="cover">
-    <h2 class="shout" style="font-size: 120px;">Производительность вёрстки</h2>
+    <h2 class="shout" style="margin-top: 200px; padding: 30px 0; font-size: 120px; color: #fefffa; font-weight: 600;
+        text-shadow: 0 0 60px #3f8bd9; background: rgba(9, 11, 20, 0.5)">Производительность вёрстки</h2>
+    <img src="img/cover.jpg" alt="" class='cover h'>
 </section>
 
 <section class="slide">
@@ -34,7 +36,7 @@
 <section class="slide">
     <h2>Скорость загрузки</h2>
 
-    <ul>
+    <ul class='double'>
         <li class="next">Размер файлов
             <ul class="next">
                 <li class="next">HTML</li>
@@ -52,6 +54,8 @@
 </section>
 
 <section class="slide white">
+    <h2>«Обычная страница»</h2>
+
     <img src="img/01-pageSize.png" style="width: 100%" alt="">
 
     <p>
@@ -59,7 +63,66 @@
     </p>
 </section>
 
-<section class="slide">
+<section class="slide white">
+    <h2>«Обычная страница»</h2>
+
+    <table class="mdl-data-table mdl-js-data-table" data-upgraded=",MaterialDataTable">
+        <thead>
+        <tr>
+            <th></th>
+            <th>50-й перцентиль</th>
+            <th>75-й перцентиль</th>
+            <th>90-й перцентиль</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>HTML</td>
+            <td>13 KB</td>
+            <td>26 KB</td>
+            <td>54 KB</td>
+        </tr>
+        <tr>
+            <td>Images</td>
+            <td>528 KB</td>
+            <td>1213 KB</td>
+            <td>2384 KB</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>207 KB</td>
+            <td>385 KB</td>
+            <td>587 KB</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>24 KB</td>
+            <td>53 KB</td>
+            <td>108 KB</td>
+        </tr>
+        <tr>
+            <td>Other</td>
+            <td>282 KB</td>
+            <td>308 KB</td>
+            <td>353 KB</td>
+        </tr>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>1054 KB</strong></td>
+            <td><strong>1985 KB</strong></td>
+            <td><strong>3486 KB</strong></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="slide white">
+    <figure>
+        <img class="cover" src="img/network-tab.png" alt="">
+    </figure>
+</section>
+
+<section class="slide white">
     <img src="img/02-connectionSpeed.png" alt="">
 </section>
 
@@ -69,12 +132,12 @@
     <ul>
         <li class="next">Несколько ресурсов / объединение</li>
         <li class="next">Минификация</li>
-        <li class="next">Гзип</li>
+        <li class="next">Gzip</li>
         <li class="next">Кеширование</li>
         <li class="next">Географическое распределение</li>
     </ul>
 
-    <p class="next"><a href="http://146.185.177.82/01-downloadTime/">Demo</a></p>
+    <p class="next"><a href="http://146.185.138.19/01-downloadTime/">Demo</a></p>
 </section>
 
 <section class="slide">
@@ -85,34 +148,87 @@
 </section>
 
 <section class="slide">
-    <h2>Ускорение загрузки</h2>
+    <h2>Ускорение загрузки ресурсов</h2>
+
+    <ol>
+        <li class="next">Текстовые форматы</li>
+        <li class="next">Растровая графика</li>
+        <li class="next">Шрифты</li>
+        <li class="next">Видео и аудио</li>
+    </ol>
+</section>
+
+<section class='slide'>
+    <h2>Текстовые файлы (HTML, CSS, JS, SVG)</h2>
 
     <ul>
-        <li class="next">Текстовые файлы (HTML, CSS, JS, SVG)
-            <ul class="next">
-                <li class="next">Минификация и объединение</li>
-                <li class="next">Сжатие</li>
-                <li class="next">Кеширование</li>
-            </ul>
-        </li>
-        <li class="next">Растровые файлы
-            <ul class="next">
-                <li class="next">Правильные алгоритмы сжатия</li>
-                <li class="next">Объединение в спрайты</li>
-                <li class="next">Кеширование</li>
-            </ul>
-        </li>
-        <li class="next">Шрифт
-            <ul class="next">
-                <li class="next">Выбор правильного формата</li>
-                <li class="next">Оставляем только нужное</li>
-            </ul>
-        </li>
+        <li class="next">Минификация и объединение</li>
+        <li class="next">Сжатие</li>
+        <li class="next">Кеширование</li>
+    </ul>
+</section>
+
+<section class='slide'>
+    <h2>Растровые файлы</h2>
+
+    <ul>
+        <li class="next">Правильные алгоритмы сжатия</li>
+        <li class="next">Объединение в спрайты / встраивание как data-uri</li>
+        <li class="next">Кеширование</li>
+    </ul>
+</section>
+
+<section class='slide'>
+    <h2>Шрифт</h2>
+
+    <ul>
+        <li class="next">Выбор правильного формата</li>
+        <li class="next">Оставляем только нужное</li>
+        <li class="next">Управление загрузкой</li>
+        <li class="next">Кеширование</li>
     </ul>
 </section>
 
 <section class="slide">
-    <h2>Картинки и шрифты &mdash; самые тяжёлые ресурсы</h2>
+    <h2>Формат шрифта</h2>
+
+    <pre>
+<code><mark>@font-face</mark> {</code>
+<code>  font-family: "Open Sans Regular";</code>
+<code>  src: url("OpenSans.eot#iefix");</code>
+<code class='mark'>  <mark>src</mark>: url("OpenSans.eot") format("embedded-opentype"),</code>
+<code class='mark'>       url("OpenSans.woff2") <mark class='important'>format("woff2")</mark>,</code>
+<code class='mark'>       url("OpenSans.woff") format("woff"),</code>
+<code class='mark'>       url("OpenSans.ttf") format("truetype"),</code>
+<code class='mark'>       url("OpenSans.svg#svgFontName'") format("svg");</code>
+<code>}</code>
+    </pre>
+</section>
+
+<section class="slide white">
+    <h2>Современное состояние</h2>
+
+    <p class="ciu_embed" data-feature="woff2" data-periods="future_1,current,past_1,past_2"><a
+            href="http://caniuse.com/#feat=woff2">Can I Use woff2?</a> Data on support for the woff2 feature across the
+        major browsers from caniuse.com. </p>
+</section>
+
+<section class="slide">
+    <h2>Формат шрифта</h2>
+
+    <pre>
+<code>@font-face {</code>
+<code>  font-family: "Open Sans Regular";</code>
+<code class='mark'>  src: url("OpenSans.woff2") format("woff2");</code>
+<code>}</code>
+<code>body {</code>
+<code class='mark'>  font-family: "Open Sans Regular", <mark class='important'>sans-serif;</mark></code>
+<code>}</code>
+</pre>
+</section>
+
+<section class="slide">
+    <h2>Управление загрузкой шрифта</h2>
 
     <ul>
         <li class="next">FOUT / FOIT</li>
@@ -121,7 +237,112 @@
         <li class="next">preload / prefetch</li>
     </ul>
 
-    <p class="next"><a href="http://146.185.177.82/03-fonts/">Demo</a></p>
+</section>
+
+<section class="slide">
+    <h2>FOUT / FOIT / FOFT</h2>
+
+    <ul>
+        <li class="next"><strong>FOUT</strong> — Flash of Unstyled Text</li>
+        <li class="next"><strong>FOIT</strong> — Flash of Invisible Text</li>
+        <li class="next"><strong>FOFT</strong> — Flash of Faux Text (<a href="https://www.zachleat.com/web/foft/">En</a>)
+        </li>
+    </ul>
+</section>
+
+<section class="slide black">
+    <img src="img/fonts-megafon.PNG" class='cover h' alt="">
+</section>
+
+<section class="slide black">
+    <img src="img/fonts-pulkovo.PNG" class='cover h' alt="">
+</section>
+
+<section class="slide">
+    <h2>Асинхронная загрузка шрифта и localStorage</h2>
+
+    <h3 class='next'>Плюсы</h3>
+
+    <ol class='next'>
+        <li>Текст доступен для чтения сразу</li>
+    </ol>
+
+    <h3 class='next'>Недостатки</h3>
+
+    <ol class='next'>
+        <li class='next'>Нужна дополнительная подготовка шрифтов</li>
+        <li class='next'>Размер загружаемых файлов больше</li>
+        <li class='next'>localStorage не безграничен</li>
+    </ol>
+
+    <ul class='next'>
+        <li><a href='http://146.185.138.19/03-fonts/'>Demo</a></li>
+        <li><a href='https://gist.github.com/h4/36aa17d0337e4ae35536c94f1919e206'>Пример кода</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>CSS Font Loading</h2>
+
+    <p class="ciu_embed" data-feature="font-loading" data-periods="future_1,current,past_1,past_2"><a
+            href="http://caniuse.com/#feat=font-loading">Can I Use woff2?</a> Data on support for the CSS Font Loading
+        feature across the
+        major browsers from caniuse.com. </p>
+</section>
+
+<section class="slide">
+    <h2>CSS Font Loading</h2>
+
+    <ol class='next'>
+        <li class='next'>Стандартный интерфейс</li>
+        <li class='next'>Нет необходимости в конвертации шрифтов</li>
+        <li class='next'><a href='http://146.185.138.19/03-fonts/'>Demo</a></li>
+    </ol>
+
+    <pre class="next">
+<code>var font = new FontFace("<mark>FiraSans-HeavyItalic</mark>",
+  "url(<mark>./FiraSans-HeavyItalic.woff2</mark>)", {});</code>
+<code> </code>
+<code>font.load().then(() => {</code>
+<code class='mark'>  document.body.className = 'font-loaded';</code>
+<code>});</code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2><code>font-display</code></h2>
+
+    <pre>
+<code>@font-face {</code>
+<code>  font-family: 'Arvo';</code>
+<code>  src: local('Arvo'), url(arvo.woff2) format('woff2');</code>
+<code class='mark'>  font-display: auto;</code>
+<code>}</code>
+</pre>
+
+
+    <h3 class='next'>Значения</h3>
+
+    <ul class="double next">
+        <li>auto</li>
+        <li>block</li>
+        <li>swap</li>
+        <li>fallback</li>
+        <li>optional</li>
+    </ul>
+
+</section>
+
+<section class="slide">
+    <h2>CSS Font Loading</h2>
+
+    <p class="ciu_embed" data-feature="css-font-rendering-controls" data-periods="future_1,current,past_1,past_2"><a
+            href="http://caniuse.com/#feat=css-font-rendering-controls">Can I Use woff2?</a> Data on support for the
+        css-font-rendering-controls
+        feature across the
+        major browsers from caniuse.com. </p>
+
+    <p class='next'><a href='http://146.185.138.19/03-fonts/'>Demo</a></p>
 </section>
 
 <section class="slide">
@@ -153,10 +374,13 @@
     </ul>
 </section>
 
-<section class="slide">
-    <h2>Отзывчивость интерфейса</h2>
+<section class="slide white">
+    <h2 style='font-size: 72px; letter-spacing: 2px; color: #FFF;'>Отзывчивость интерфейса</h2>
+    <img src="img/smoothest.jpg" class='cover h' alt="">
+</section>
 
-    <p class="next"><img src="img/04-60fps.jpg" alt=""></p>
+<section class="slide white">
+    <img src="img/progressive-rendering.png" class='cover' alt="">
 </section>
 
 <section class="slide">
@@ -190,6 +414,8 @@
         <li class="next">Минимизация объема критических ресурсов</li>
         <li class="next">Как можно скорее загружаем критические ресурсы</li>
     </ul>
+
+    <p><a href="http://146.185.138.19/04-critical-rendering-path">Demo</a></p>
 </section>
 
 <section class="slide">
@@ -250,7 +476,7 @@
         <li class="next">translateZ() / translate3D()</li>
     </ul>
 
-    <p class="next"><a href="http://146.185.177.82/02-repaint-reflow/">Demo</a></p>
+    <p class="next"><a href="http://146.185.138.19/02-repaint-reflow/">Demo</a></p>
 </section>
 
 <section class="slide">
@@ -268,10 +494,12 @@
     <ul>
         <li class="next">Более нестабильное соединение</li>
         <li class="next">Более слабое железо</li>
+        <li class="next">Меньше объём кеша/localStorage</li>
         <li class="next">Аппаратное ускорение &mdash; палка о двух концах</li>
     </ul>
 </section>
 
 <script src="build/main.js"></script>
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.0.1/caniuse-embed.min.js"></script>
 </body>
 </html>
