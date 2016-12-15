@@ -127,6 +127,13 @@
 </section>
 
 <section class="slide">
+    <p><img src="img/03-devTools.png" alt=""></p>
+    <p>
+        <a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading#view-network-timing-details-for-a-specific-resource">Подробнее
+            про Network Tab</a></p>
+</section>
+
+<section class="slide">
     <h2>Ускорение скорости загрузки</h2>
 
     <ul>
@@ -137,14 +144,7 @@
         <li class="next">Географическое распределение</li>
     </ul>
 
-    <p class="next"><a href="http://146.185.138.19/01-downloadTime/">Demo</a></p>
-</section>
-
-<section class="slide">
-    <p><img src="img/03-devTools.png" alt=""></p>
-    <p>
-        <a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading#view-network-timing-details-for-a-specific-resource">Подробнее
-            про Network Tab</a></p>
+    <p class="next"><a href="http://146.185.165.119/01-downloadTime/">Demo</a></p>
 </section>
 
 <section class="slide">
@@ -178,6 +178,45 @@
     </ul>
 </section>
 
+<section class="slide">
+    <h2>Data-URI</h2>
+
+    <p>URL-схема, позволяющая включать данные у в строку url, как ссылку на внешний ресурс.</p>
+
+    <pre style='font-size: 80%;' class='next'>
+<code>data:[&lt;mime type>][;charset=&lt;charset>][;base64],&lt;encoded data></code>
+    </pre>
+
+    <pre class='next'>
+<code>li {</code>
+<code>  background:</code>
+<code>    url(data:image/gif;base64,R0lGODlhEAAQAMQ...);</code>
+<code>}</code>
+    </pre>
+
+    <p class='next'><a href="https://css-tricks.com/examples/DataURIs/">Demo</a></p>
+
+</section>
+
+<section class="slide">
+    <h2>Data-URI</h2>
+
+    <h3 class='next'>Плюсы</h3>
+
+    <ul class='next'>
+        <li>Нет лишних запросов</li>
+    </ul>
+
+    <h3 class='next'>Минусы</h3>
+
+    <ul>
+        <li class='next'>Увеличение объёма (~+30%)</li>
+        <li class='next'>Нечитаемо/нередактируемо</li>
+        <li class='next'>Сложности с кешированием / инвалидацией</li>
+    </ul>
+
+</section>
+
 <section class='slide'>
     <h2>Шрифт</h2>
 
@@ -206,11 +245,72 @@
 </section>
 
 <section class="slide white">
-    <h2>Современное состояние</h2>
+    <h2>TTF / OTF</h2>
+
+    <p class="ciu_embed" data-feature="ttf" data-periods="future_1,current,past_1,past_2"><a
+            href="http://caniuse.com/#feat=ttf">Can I Use ttf?</a> Data on support for the ttf feature across the
+        major browsers from caniuse.com. </p>
+</section>
+
+<section class="slide white">
+    <h2>EOT</h2>
+
+    <p class="ciu_embed" data-feature="eot" data-periods="future_1,current,past_1,past_2"><a
+            href="http://caniuse.com/#feat=eot">Can I Use eot?</a> Data on support for the eot feature across the
+        major browsers from caniuse.com. </p>
+</section>
+
+<section class="slide white">
+    <h2>SVG</h2>
+
+    <p class="ciu_embed" data-feature="svg-fonts" data-periods="future_1,current,past_1,past_2"><a
+            href="http://caniuse.com/#feat=svg-fonts">Can I Use svg-fonts?</a> Data on support for the svg-fonts feature across the
+        major browsers from caniuse.com. </p>
+</section>
+
+<section class="slide white">
+    <h2>WOFF</h2>
+
+    <p class="ciu_embed" data-feature="woff" data-periods="future_1,current,past_1,past_2"><a
+            href="http://caniuse.com/#feat=woff">Can I Use woff?</a> Data on support for the woff feature across the
+        major browsers from caniuse.com. </p>
+</section>
+
+<section class="slide white">
+    <h2>WOFF 2</h2>
 
     <p class="ciu_embed" data-feature="woff2" data-periods="future_1,current,past_1,past_2"><a
             href="http://caniuse.com/#feat=woff2">Can I Use woff2?</a> Data on support for the woff2 feature across the
         major browsers from caniuse.com. </p>
+</section>
+
+<section class="slide">
+    <h2>Размер файла шрифта</h2>
+
+    <p><a href="http://www.paratype.com/public/">PT SERIF Regular</a></p>
+
+    <table>
+        <tr>
+            <th>eot</th>
+            <td>93 кб</td>
+        </tr>
+        <tr>
+            <th>svg</th>
+            <td>362 кб</td>
+        </tr>
+        <tr>
+            <th>ttf</th>
+            <td>201 кб</td>
+        </tr>
+        <tr>
+            <th>woff</th>
+            <td>107 кб</td>
+        </tr>
+        <tr>
+            <th>woff 2</th>
+            <td>77 кб</td>
+        </tr>
+    </table>
 </section>
 
 <section class="slide">
@@ -276,7 +376,7 @@
     </ol>
 
     <ul class='next'>
-        <li><a href='http://146.185.138.19/03-fonts/'>Demo</a></li>
+        <li><a href='http://146.185.165.119/03-fonts/'>Demo</a></li>
         <li><a href='https://gist.github.com/h4/36aa17d0337e4ae35536c94f1919e206'>Пример кода</a></li>
     </ul>
 </section>
@@ -296,7 +396,7 @@
     <ol class='next'>
         <li class='next'>Стандартный интерфейс</li>
         <li class='next'>Нет необходимости в конвертации шрифтов</li>
-        <li class='next'><a href='http://146.185.138.19/03-fonts/'>Demo</a></li>
+        <li class='next'><a href='http://146.185.165.119/03-fonts/'>Demo</a></li>
     </ol>
 
     <pre class="next">
@@ -342,7 +442,7 @@
         feature across the
         major browsers from caniuse.com. </p>
 
-    <p class='next'><a href='http://146.185.138.19/03-fonts/'>Demo</a></p>
+    <p class='next'><a href='http://146.185.165.119/03-fonts/'>Demo</a></p>
 </section>
 
 <section class="slide">
@@ -415,7 +515,7 @@
         <li class="next">Как можно скорее загружаем критические ресурсы</li>
     </ul>
 
-    <p><a href="http://146.185.138.19/04-critical-rendering-path">Demo</a></p>
+    <p><a href="http://146.185.165.119/04-critical-rendering-path">Demo</a></p>
 </section>
 
 <section class="slide">
@@ -476,7 +576,7 @@
         <li class="next">translateZ() / translate3D()</li>
     </ul>
 
-    <p class="next"><a href="http://146.185.138.19/02-repaint-reflow/">Demo</a></p>
+    <p class="next"><a href="http://146.185.165.119/02-repaint-reflow/">Demo</a></p>
 </section>
 
 <section class="slide">
