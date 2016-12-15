@@ -178,6 +178,45 @@
     </ul>
 </section>
 
+<section class="slide">
+    <h2>Data-URI</h2>
+
+    <p>URL-схема, позволяющая включать данные у в строку url, как ссылку на внешний ресурс.</p>
+
+    <pre style='font-size: 80%;' class='next'>
+<code>data:[&lt;mime type>][;charset=&lt;charset>][;base64],&lt;encoded data></code>
+    </pre>
+
+    <pre class='next'>
+<code>li {</code>
+<code>  background:</code>
+<code>    url(data:image/gif;base64,R0lGODlhEAAQAMQ...);</code>
+<code>}</code>
+    </pre>
+
+    <p class='next'><a href="https://css-tricks.com/examples/DataURIs/">Demo</a></p>
+
+</section>
+
+<section class="slide">
+    <h2>Data-URI</h2>
+
+    <h3 class='next'>Плюсы</h3>
+
+    <ul class='next'>
+        <li>Нет лишних запросов</li>
+    </ul>
+
+    <h3 class='next'>Минусы</h3>
+
+    <ul>
+        <li class='next'>Увеличение объёма (~+30%)</li>
+        <li class='next'>Нечитаемо/нередактируемо</li>
+        <li class='next'>Сложности с кешированием / инвалидацией</li>
+    </ul>
+
+</section>
+
 <section class='slide'>
     <h2>Шрифт</h2>
 
